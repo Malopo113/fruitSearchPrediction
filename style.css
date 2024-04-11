@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+ outline: none;
+}
+
+body {
+  font-family: Montserrat, serif;
+  background: linear-gradient(135deg, orange 55%, cyan);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  font-size: 35px;
+  width: 450px;
+  height: 75px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  font-family: Montserrat, serif;
+  color: rgb(247, 77, 5);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.search-container {
+  text-align: center;
+}
+.search-container input,
+.search-container .suggestions {
+  margin-top: 7px;
+}
+.search-container input {
+  background-color: rgba(242, 242, 242, 0.75);
+  box-shadow: 3px 3px 5px black;
+}
+.search-container .suggestions {
+  position: absolute;
+  width: 300px;
+  border-radius: 5px;
+  padding: 0;
+  text-align: left;
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+ul.has-suggestions {
+  display: block;
+  
+  background-color: rgba(242, 242, 242, 0.75);
+}
+ul li {
+  padding: 10px;
+}
+ul li:hover {
+  background-color: rgb(165, 247, 247);
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
+  cursor: pointer;
+}
+
+input {
+  transition: all 0.3s ease;
+}
